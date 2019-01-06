@@ -40,3 +40,9 @@ This project shows several core features of Angular including:
 1. Visit `http://localhost`
 
 If you'd like to run the `production` version run `docker-compose -f docker-compose.prod.yml [build | up]`. This uses a multi-stage Docker build process to create the nginx image for the Angular app.
+
+## Notes
+
+Running container with shared drive on Windows (cmd):
+
+`docker run -p 8080:80 -v %cd%/dist:/usr/share/nginx/html nginx-angular`
